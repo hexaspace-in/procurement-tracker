@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "procurement-tracker"
+version = "0.1.0"
+description = "Procurement for interior and construction projects: status flow, need-by and order-by dates from lead times, late flags, PO maths with GST and advances, next actions, vendor quote comparison."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Hexaspace" }]
+keywords = ["procurement", "purchase order", "construction", "interior design", "vendor", "lead time", "india"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/procurement_tracker"]
